@@ -1,0 +1,40 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+driver =webdriver.Chrome(executable_path=C:/Users/DELL/PycharmProjects/Test/chromedriver_win32/chromedriver.exe)
+#Task 1
+'''To Launch URL use get Method'''
+driver.get("https://staging.fionadiamonds.com")
+time.sleep(0.5)
+
+
+#Task 2
+'''Create account using path finder'''
+driver.find_element_by_xpath(//*[@id="full_header"]/div[2]/div[2]/div[1]/div[1]/a[1]/span[1]).click()
+#this xpath will click on sing up
+driver.find_element_by_xpath(//*[@id="post-9"]/div[1]/div[1]/div[2]/p[1]/a[1]).click() #this method will click on sig up
+
+#after this provide all the detail
+#enter first name
+driver.find_element_by_xpath(//*[@id="account_first_name"]).send_keys("Shubham")
+#Enter Last name
+driver.find_element_by_xpath(//*[@id="account_last_name"]).send_keys("Shinde")
+#Email Address
+driver.find_element_by_xpath(//*[@id="reg_email"]).send_keys("srshinde242@gmail.com")
+#city
+driver.find_element_by_xpath(//*[@id="reg_billing_city"]).send_keys("pune")
+#Phone number
+driver.find_element_by_xpath(//*[@id="post-148518"]/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/input[1]).send_keys("9689158654")
+#now click on get OTP using path finder
+driver.find_element_by_xpath(//*[@id="post-148518"]/div[1]/div[1]/form[1]/p[5]/button[1]).send_keys("Enter OTP recived")
+#This will create account
+#After LogIn
+
+
+#Task 3
+#Title of the page
+Title=driver.title()
+print("This is the tile of the page" + Title)
+
+
